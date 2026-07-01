@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pebblonia — Amazon PPC Launch Plan &amp; Market Analysis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4EE; --paper-2:#FBF9F5; --card:#FFFFFF;
+    --ink:#322F2A; --ink-soft:#5E5A50; --ink-faint:#8F897C;
+    --line:#E8E2D6; --line-soft:#F0EBE1;
+    --teal:#2E8577;  --teal-soft:#E3EFEC;
+    --coral:#CB6047; --coral-soft:#F8E8E2;
+    --gold:#B4801F;  --gold-soft:#F5ECD6;
+    --plum:#7C5A8A;  --plum-soft:#EEE6F1;
+    --blue:#4A7C9E;  --blue-soft:#E4EDF2;
+    --pos:#2E8577; --neg:#CB6047;
+    --maxw:920px; --radius:16px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:radial-gradient(1200px 500px at 80% -10%, #EFEADD 0%, rgba(239,234,221,0) 60%),var(--paper);
+    color:var(--ink);font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:16px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px 90px;}
+
+  .cover{position:relative;max-width:var(--maxw);margin:0 auto;padding:64px 22px 34px;}
+  .eyebrow{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--teal);margin:0 0 18px;}
+  .cover h1{font-family:'Fraunces',Georgia,serif;font-optical-sizing:auto;font-weight:500;
+    font-size:clamp(52px,10vw,92px);line-height:.98;letter-spacing:-.015em;margin:0;color:var(--ink);}
+  .cover .tag{font-family:'Fraunces',Georgia,serif;font-size:clamp(18px,3.4vw,23px);font-weight:400;font-style:italic;
+    color:var(--ink-soft);margin:14px 0 0;max-width:660px;}
+  .dots{display:flex;gap:9px;margin:26px 0 0;flex-wrap:wrap;}
+  .dots span{width:11px;height:11px;border-radius:50%;display:block;}
+  .meta{margin-top:34px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;
+    background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;}
+  .meta div{background:var(--paper-2);padding:15px 18px;}
+  .meta dt{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin:0 0 4px;}
+  .meta dd{margin:0;font-size:14.5px;font-weight:500;color:var(--ink);}
+  .meta dd.mono{font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:400;letter-spacing:-.01em;}
+
+  .toc{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;
+    margin:20px auto 8px;max-width:var(--maxw);box-shadow:0 1px 0 rgba(50,47,42,.03);}
+  .toc h2{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ink-faint);font-weight:700;margin:0 0 14px;}
+  .toc ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:2px 26px;}
+  .toc li a{display:flex;align-items:baseline;gap:11px;text-decoration:none;color:var(--ink);padding:6px 0;
+    font-size:14.5px;border-bottom:1px solid transparent;transition:color .15s;}
+  .toc li a:hover{color:var(--teal);}
+  .toc li a .n{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-faint);min-width:20px;font-weight:500;}
+
+  section{margin-top:56px;scroll-margin-top:20px;}
+  .sec-head{display:flex;align-items:center;gap:16px;margin-bottom:8px;}
+  .pebble{width:52px;height:52px;flex:none;}
+  .sec-head h2{font-family:'Fraunces',Georgia,serif;font-weight:500;font-optical-sizing:auto;
+    font-size:clamp(24px,4.4vw,32px);line-height:1.08;letter-spacing:-.01em;margin:0;color:var(--ink);}
+  .sec-rule{height:1px;background:linear-gradient(90deg,var(--line),transparent);margin:16px 0 22px;}
+
+  h3{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:19.5px;letter-spacing:-.005em;margin:34px 0 10px;color:var(--ink);}
+  h3 .h3n{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;color:var(--ink-faint);margin-right:9px;}
+  p{margin:0 0 14px;color:var(--ink);}
+  strong{font-weight:600;color:var(--ink);}
+  a{color:var(--teal);}
+  ul{margin:0 0 16px;padding-left:0;list-style:none;}
+  ul li{position:relative;padding-left:22px;margin:7px 0;color:var(--ink);}
+  ul li::before{content:"";position:absolute;left:2px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--teal);}
+  ul li ul{margin:6px 0 6px;}
+  ul li ul li::before{background:var(--ink-faint);width:5px;height:5px;top:11px;}
+
+  .call{border-radius:14px;padding:18px 20px 18px 22px;margin:18px 0;border-left:4px solid var(--teal);background:var(--teal-soft);}
+  .call p:last-child{margin-bottom:0;}
+  .call.rec{border-color:var(--teal);background:var(--teal-soft);}
+  .call.risk{border-color:var(--coral);background:var(--coral-soft);}
+  .call.note{border-color:var(--gold);background:var(--gold-soft);}
+  .call.plum{border-color:var(--plum);background:var(--plum-soft);}
+  .call.blue{border-color:var(--blue);background:var(--blue-soft);}
+  .call .k{display:inline-block;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;font-weight:700;margin-bottom:7px;}
+  .call.rec .k{color:var(--teal);} .call.risk .k{color:var(--coral);} .call.note .k{color:var(--gold);}
+  .call.plum .k{color:var(--plum);} .call.blue .k{color:var(--blue);}
+
+  .feature{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 26px 24px;margin:20px 0 24px;
+    box-shadow:0 8px 30px rgba(50,47,42,.05);}
+  .stones{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:6px 0 4px;}
+  .stone{text-align:center;border-radius:16px;padding:20px 12px 16px;position:relative;overflow:hidden;}
+  .stone.s1{background:var(--teal-soft);} .stone.s2{background:var(--gold-soft);} .stone.s3{background:var(--plum-soft);}
+  .stone .amt{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(28px,6vw,40px);line-height:1;letter-spacing:-.02em;}
+  .stone.s1 .amt{color:var(--teal);} .stone.s2 .amt{color:var(--gold);} .stone.s3 .amt{color:var(--plum);}
+  .stone .lbl{font-size:12px;color:var(--ink-soft);margin-top:8px;font-weight:500;line-height:1.3;}
+  .stone .sub{font-size:11px;color:var(--ink-faint);margin-top:2px;font-family:'IBM Plex Mono',monospace;}
+  .bewrap{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:20px;padding-top:18px;border-top:1px dashed var(--line);}
+  .bebig{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:34px;color:var(--coral);line-height:1;letter-spacing:-.02em;}
+  .betxt{font-size:14px;color:var(--ink-soft);flex:1;min-width:220px;}
+
+  .tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0 18px;border:1px solid var(--line);border-radius:14px;background:var(--card);}
+  table{border-collapse:collapse;width:100%;font-size:14px;min-width:440px;}
+  caption{caption-side:top;text-align:left;font-size:12.5px;color:var(--ink-faint);padding:12px 16px 0;font-weight:500;}
+  thead th{background:var(--paper-2);text-align:left;font-weight:600;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;
+    color:var(--ink-soft);padding:12px 16px;border-bottom:1px solid var(--line);white-space:nowrap;}
+  tbody td{padding:11px 16px;border-bottom:1px solid var(--line-soft);vertical-align:top;color:var(--ink);}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover{background:#FCFBF8;}
+  td.num,th.num{text-align:right;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:-.02em;white-space:nowrap;}
+  .cost{color:var(--neg);font-family:'IBM Plex Mono',monospace;}
+  .prof{color:var(--pos);font-weight:600;}
+  tr.total td{background:var(--gold-soft);font-weight:600;}
+  tr.grand td{background:var(--teal-soft);font-weight:700;}
+  tr.grand td .prof{color:var(--teal);}
+  .pill{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11.5px;font-weight:600;
+    font-family:'IBM Plex Mono',monospace;letter-spacing:-.01em;}
+  .pill.win{background:var(--teal-soft);color:var(--teal);}
+  .pill.bad{background:var(--coral-soft);color:var(--coral);}
+  .pill.warn{background:var(--gold-soft);color:var(--gold);}
+
+  .checks{counter-reset:c;list-style:none;padding:0;margin:14px 0 4px;}
+  .checks li{position:relative;padding:16px 18px 16px 58px;margin:10px 0;background:var(--card);border:1px solid var(--line);border-radius:14px;}
+  .checks li::before{counter-increment:c;content:counter(c);position:absolute;left:16px;top:15px;width:28px;height:28px;border-radius:50%;
+    background:var(--teal-soft);color:var(--teal);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;
+    font-family:'IBM Plex Mono',monospace;}
+
+  hr.big{border:none;height:1px;background:var(--line);margin:56px 0 0;}
+  footer{max-width:var(--maxw);margin:36px auto 0;padding:24px 22px 0;font-size:12.5px;color:var(--ink-faint);font-style:italic;line-height:1.6;}
+
+  @media (max-width:640px){
+    .toc ol{grid-template-columns:1fr;}
+    .stones{grid-template-columns:1fr;}
+    .stone{display:flex;align-items:center;gap:16px;text-align:left;padding:16px;}
+    .stone .lbl{margin-top:0;}
+    .cover{padding-top:44px;}
+  }
+  @media print{
+    body{background:#fff;}
+    .tscroll{overflow:visible;}
+    section{break-inside:avoid;}
+    .feature,.call,.checks li{box-shadow:none;}
+    a{color:var(--ink);}
+  }
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <p class="eyebrow">Amazon PPC Launch Plan &amp; Market Analysis</p>
+  <h1>Pebblonia</h1>
+  <p class="tag">A first-time launch, read honestly: where the real opportunity is, what the numbers can and can't do, and a 90-day plan built on the actual market data — not best-case wishful thinking.</p>
+  <div class="dots">
+    <span style="background:var(--teal)"></span><span style="background:var(--coral)"></span>
+    <span style="background:var(--gold)"></span><span style="background:var(--plum)"></span>
+    <span style="background:var(--blue)"></span><span style="background:var(--teal-soft)"></span>
+    <span style="background:var(--gold-soft)"></span>
+  </div>
+  <dl class="meta">
+    <div><dt>Prepared for</dt><dd>Christina, Owner — Pebblonia</dd></div>
+    <div><dt>Prepared by</dt><dd>Hassan Iftikhar · Account Manager, AMZ One Step</dd></div>
+    <div><dt>Game plan call</dt><dd>July 1, 2026 · 11:00 AM EST</dd></div>
+    <div><dt>Products</dt><dd class="mono">B0GG7TFM5V · B0GFKLJQZR · B0GDZN7KPB</dd></div>
+    <div><dt>Amazon ad budget</dt><dd class="mono">$1,000 – $1,500 / month</dd></div>
+  </dl>
+</header>
+
+<nav class="toc" aria-label="Contents">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#s1"><span class="n">01</span>Executive Summary</a></li>
+    <li><a href="#s2"><span class="n">02</span>How Amazon Ads Work &amp; What You'll Pay</a></li>
+    <li><a href="#s3"><span class="n">03</span>The Market — What the Data Shows</a></li>
+    <li><a href="#s4"><span class="n">04</span>Per-Unit Profitability</a></li>
+    <li><a href="#s5"><span class="n">05</span>Pricing, Discounts &amp; Positioning</a></li>
+    <li><a href="#s6"><span class="n">06</span>Break-Even ACOS &amp; Target TACOS</a></li>
+    <li><a href="#s7"><span class="n">07</span>Amazon Vine — Reviews</a></li>
+    <li><a href="#s8"><span class="n">08</span>The 90-Day PPC Launch Plan</a></li>
+    <li><a href="#s9"><span class="n">09</span>Is This Launchable? &amp; Decisions</a></li>
+  </ol>
+</nav>
+
+<div class="wrap">
+
+  <!-- 1 -->
+  <section id="s1">
+    <div class="sec-head">
+      <svg class="pebble" viewBox="0 0 60 60"><ellipse cx="30" cy="30" rx="26" ry="24" fill="var(--teal-soft)"/><ellipse cx="30" cy="30" rx="24" ry="22" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.1 6.4"/><text x="30" y="31" text-anchor="middle" dominant-baseline="middle" font-family="Fraunces,serif" font-size="20" font-weight="600" fill="var(--teal)">1</text></svg>
+      <h2>Executive Summary — The Honest Version</h2>
+    </div>
+    <div class="sec-rule"></div>
+
+    <p>Christina, thank you for the call on June 29. This plan is deliberately blunt, because a first launch goes better when the numbers are on the table early. Here is the one-page version.</p>
+
+    <p><strong>The market is real and healthy.</strong> The main search term "rocks for painting" gets ~27,000 searches a month, and the top 52 products on that term sell about <strong>$1.69M combined every month</strong>. Demand is not the problem, and no single seller owns the category.</p>
+
+    <p><strong>But both products have very thin margins, and that changes everything.</strong> After Amazon's fees and your product cost, this is what's left on each sale today:</p>
+
+    <div class="feature">
+      <div class="stones">
+        <div class="stone s1"><div><div class="amt">$2.14</div><div class="lbl">Heart 4-pack profit</div><div class="sub">$19.99 · 10.7% margin</div></div></div>
+        <div class="stone s2"><div><div class="amt">$1.73</div><div class="lbl">Round 4-pack profit</div><div class="sub">$19.99 · 8.7% margin</div></div></div>
+        <div class="stone s3"><div><div class="amt">$3.00</div><div class="lbl">Mandala Kit profit</div><div class="sub">$34.99 · 8.6% margin</div></div></div>
+      </div>
+      <div class="bewrap">
+        <div class="bebig">8–11%</div>
+        <div class="betxt">Your <strong>break-even ACOS</strong> (how much ad cost a sale can absorb before it loses money) is only 8–11%. A brand-new launch with no reviews normally runs ads at <strong>60–130%+</strong> ACOS for the first months. So during launch, <strong>ads will lose money on essentially every sale.</strong> That's not a mistake — it's the cost of buying your way onto page one — but you need to go in knowing it.</div>
+      </div>
+    </div>
+
+    <p><strong>What this means for the launch, plainly:</strong></p>
+    <ul>
+      <li><strong>Revenue is achievable; profit is not, for the first 6 months or so.</strong> Realistically you can build to a few thousand dollars a month by month 3–4, but the account will run at a loss or breakeven while we buy rank and reviews.</li>
+      <li><strong>The Kit is the real opportunity — it should get most of the ad budget.</strong> It has a clean keyword base ("rock painting kit" = 15,600 searches/mo) and very few true premium-kit competitors. The 4-pack is a much harder sell (4 rocks against competitors offering 15–100), so it stays a smaller, secondary play.</li>
+      <li><strong>The single biggest lever is your margin.</strong> A price adjustment on the 4-pack and a supplier conversation about the Kit's cost ($17.52 is high) do more for this business than any bidding trick. Details in Section 5.</li>
+    </ul>
+
+    <div class="call rec">
+      <span class="k">Three things to decide before we spend a dollar on ads</span>
+      <ul>
+        <li>How we price the 4-pack (Section 5) — this sets whether it can be advertised at all.</li>
+        <li>Enrolling both products in Amazon Vine to generate the first reviews (Section 7).</li>
+        <li>Confirming inventory is actually sellable — your 4-packs currently show <strong>0 units available</strong> in Seller Central even though 56 are on hand (Section 8). We can't advertise what can't ship.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section id="s2">
+    <div class="sec-head">
+      <svg class="pebble" viewBox="0 0 60 60"><ellipse cx="30" cy="30" rx="26" ry="24" fill="var(--blue-soft)"/><ellipse cx="30" cy="30" rx="24" ry="22" fill="none" stroke="var(--blue)" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.1 6.4"/><text x="30" y="31" text-anchor="middle" dominant-baseline="middle" font-family="Fraunces,serif" font-size="20" font-weight="600" fill="var(--blue)">2</text></svg>
+      <h2>How Amazon Ads Work &amp; What You'll Actually Pay</h2>
+    </div>
+    <div class="sec-rule"></div>
+
+    <p>On our call there was some understandable confusion about what you've paid for, so let's clear it up first. There are <strong>two completely separate costs</strong>, and only one of them is "PPC."</p>
+
+    <div class="tscroll"><table>
+      <thead><tr><th>What it is</th><th>Who you pay</th><th>What it covers</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Management fee</strong> (already paid)</td><td>AMZ One Step</td><td>Our work — building, launching, and optimizing your ad campaigns, keyword research, reporting, and the creative on your listing. A flat service you've already covered.</td></tr>
+        <tr><td><strong>Ad spend / "PPC"</strong> (not yet started)</td><td>Amazon, directly</td><td>The money that actually buys the ad clicks. This is <strong>not</strong> included in what you paid us — Amazon charges it separately. This is the $1,000–$1,500/month we discussed.</td></tr>
+      </tbody>
+    </table></div>
+
+    <p><strong>PPC</strong> means "pay-per-click." You only pay when a shopper actually clicks your ad — not when it's shown. In our category a click currently costs around <strong>$0.75 on average</strong>, and up to <strong>$1.00–$1.25</strong> for the most competitive terms like "rocks for painting."</p>
+
+    <div class="call blue">
+      <span class="k">How Amazon collects the ad money</span>
+      <p>Amazon deducts your ad spend from your <strong>sales</strong> first. If in a given period your ad spend is larger than your sales (very common in the first weeks of a launch, when sales are still small), Amazon charges the difference to your <strong>card on file</strong>. So early on, expect some charges to hit your card directly; as sales grow, more of it comes out of sales instead.</p>
+    </div>
+
+    <h3><span class="h3n">2.1</span>Two numbers we'll manage the account by</h3>
+    <ul>
+      <li><strong>ACOS</strong> (Advertising Cost of Sale) = ad spend ÷ sales <em>from ads</em>. If you spend $30 on ads and get $100 of ad-driven sales, ACOS is 30%. Lower is better. It tells us how efficient the ads themselves are.</li>
+      <li><strong>TACOS</strong> (Total ACOS) = ad spend ÷ <em>total</em> sales (ads + organic). This is the number that decides whether the whole business makes money. As organic (non-ad) sales grow, TACOS falls — and that's the real goal of a launch.</li>
+    </ul>
+
+    <h3><span class="h3n">2.2</span>The kinds of ads we'll run (plain English)</h3>
+    <ul>
+      <li><strong>Sponsored Products</strong> — the ads that look like normal search results. This is 80–90% of what we'll run.</li>
+      <li><strong>Sponsored Brands (video)</strong> — a short video ad at the top of search. We add this once you have a few reviews; it suits a story-driven brand like yours.</li>
+    </ul>
+    <p>Within Sponsored Products, we choose how tightly Amazon matches a shopper's search to your ad — these are called <strong>match types</strong>:</p>
+    <ul>
+      <li><strong>Auto</strong> — Amazon decides what searches to show you on. Cheap way to <em>discover</em> which terms convert.</li>
+      <li><strong>Broad</strong> — matches related searches (e.g. "rock painting gift"). Good for discovery.</li>
+      <li><strong>Exact</strong> — you pick the precise phrase (e.g. "rock painting kit"). Used to <em>scale</em> the terms we've proven make sales.</li>
+      <li><strong>Product targeting</strong> — your ad appears directly on a competitor's product page.</li>
+    </ul>
+    <p>The launch method is simple: use Auto and Broad to <em>find</em> what works cheaply, then move the winners into Exact and spend confidently there. Everything in Section 8 follows that logic.</p>
+  </section>
+
+  <!-- 3 -->
+  <section id="s3">
+    <div class="sec-head">
+      <svg class="pebble" viewBox="0 0 60 60"><ellipse cx="30" cy="30" rx="26" ry="24" fill="var(--gold-soft)"/><ellipse cx="30" cy="30" rx="24" ry="22" fill="none" stroke="var(--gold)" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.1 6.4"/><text x="30" y="31" text-anchor="middle" dominant-baseline="middle" font-family="Fraunces,serif" font-size="20" font-weight="600" fill="var(--gold)">3</text></svg>
+      <h2>The Market — What the Data Actually Shows</h2>
+    </div>
+    <div class="sec-rule"></div>
+
+    <p>Everything below comes from a live pull of the top 60 products on "rocks for painting" (52 unique after removing duplicates) and 11,382 keywords from a leading competitor's search data, both dated July 1, 2026.</p>
+
+    <h3><span class="h3n">3.1</span>Category size — healthy, with room</h3>
+    <div class="tscroll"><table>
+      <thead><tr><th>Metric (top 52 products on "rocks for painting")</th><th class="num">Value</th></tr></thead>
+      <tbody>
+        <tr><td>Combined monthly revenue</td><td class="num">$1,685,260</td></tr>
+        <tr><td>Combined monthly units</td><td class="num">100,468</td></tr>
+        <tr><td>Median revenue per product</td><td class="num">$12,920</td></tr>
+        <tr><td>Median units per product</td><td class="num">545</td></tr>
+        <tr><td>Median price</td><td class="num">$21.59</td></tr>
+        <tr><td>Median review count</td><td class="num">372</td></tr>
+        <tr><td>Median rating</td><td class="num">4.4 ★</td></tr>
+      </tbody>
+    </table></div>
+    <p>A typical product here does ~545 units and ~$13K a month. That's a solid, mid-sized niche — big enough to matter, not so cut-throat that a newcomer is locked out.</p>
+
+    <h3><span class="h3n">3.2</span>Nobody owns the category</h3>
+    <div class="tscroll"><table>
+      <thead><tr><th>Brand</th><th class="num">Monthly Rev.</th><th class="num">SKUs</th><th>What they actually sell</th></tr></thead>
+      <tbody>
+        <tr><td>ARTISTRO</td><td class="num">$622K</td><td class="num">2</td><td><span class="pill warn">not rocks</span> Paint markers — shows up because painters cross-shop</td></tr>
+        <tr><td>Simetufy</td><td class="num">$388K</td><td class="num">16</td><td>The real rocks leader — but needs 16 listings to get there</td></tr>
+        <tr><td>JOYIN</td><td class="num">$270K</td><td class="num">1</td><td>Cheap kids' glow-in-the-dark rock <strong>kit</strong> at $14.99</td></tr>
+        <tr><td>lifetop</td><td class="num">$86K</td><td class="num">8</td><td>Bulk value rocks, $15–22</td></tr>
+        <tr><td>dojobkinb</td><td class="num">$56K</td><td class="num">1</td><td>One strong bulk SKU (25 rocks, $13.77)</td></tr>
+        <tr><td>PGN</td><td class="num">$44K</td><td class="num">1</td><td>40 large river rocks, $22.95</td></tr>
+        <tr><td>Markdang</td><td class="num">$41K</td><td class="num">2</td><td>Mixed-size large-rock packs, ~$27</td></tr>
+        <tr><td>ROCART · CYLHCM · CFKJ · DALTACK</td><td class="num">$18–31K ea.</td><td class="num">1–4</td><td>Small bulk-rock players</td></tr>
+      </tbody>
+    </table></div>
+    <div class="call note">
+      <span class="k">What this means</span>
+      <p>The category is <strong>fragmented</strong>. The leader (Simetufy) runs 16 separate listings to reach $388K — no single product dominates. And several listings with under 100 reviews still do $9–20K a month, which proves a brand-new, well-built listing can break in within a few months. There is genuine space here.</p>
+    </div>
+
+    <h3><span class="h3n">3.3</span>The "US brand" angle — real, but let's be precise</h3>
+    <p>By product count, <strong>46 of the 52 sellers (88%) are based in China.</strong> An authentic, artist-founded US brand is a real differentiator against a wall of generic listings — that part is true and we'll use it.</p>
+    <p>One honest caveat so we don't overstate it: by <em>revenue</em>, US brands are actually 56% of the category — but that's almost entirely two US companies (ARTISTRO's paint markers and JOYIN's kids' kit) that don't sell plain painting rocks at all. Among <strong>dedicated rock sellers</strong>, Chinese brands clearly lead. So the wedge is genuine, it just needs to be earned with strong creative and reviews, not assumed.</p>
+
+    <h3><span class="h3n">3.4</span>Where the money sits by price — the key insight</h3>
+    <div class="tscroll"><table>
+      <thead><tr><th>Price band</th><th class="num">Products</th><th class="num">Avg units/mo</th><th class="num">Band revenue</th></tr></thead>
+      <tbody>
+        <tr class="grand"><td>Under $10</td><td class="num">8</td><td class="num">6,892</td><td class="num">$703K</td></tr>
+        <tr><td>$10–15</td><td class="num">6</td><td class="num">3,644</td><td class="num">$385K</td></tr>
+        <tr><td>$15–20 <span class="pill bad">weakest</span></td><td class="num">10</td><td class="num">608</td><td class="num">$99K</td></tr>
+        <tr><td>$20–25</td><td class="num">9</td><td class="num">780</td><td class="num">$157K</td></tr>
+        <tr><td>$25–30</td><td class="num">5</td><td class="num">781</td><td class="num">$105K</td></tr>
+        <tr class="total"><td>$30–40</td><td class="num">12</td><td class="num">516</td><td class="num">$216K</td></tr>
+        <tr><td>$40+</td><td class="num">2</td><td class="num">140</td><td class="num">$20K</td></tr>
+      </tbody>
+    </table></div>
+    <p>Two zones win: <strong>under $15</strong> (high-volume bulk, thin margins, a price war we don't want) and <strong>$25–40</strong> (premium packs and kits). The <strong>$15–20 band is the weakest in the whole market</strong> — only ~608 units per product. That is exactly where your 4-pack sits today at $19.99. More on fixing that in Section 5.</p>
+
+    <h3><span class="h3n">3.5</span>Your two products vs the shelf they'll actually sit on</h3>
+    <p><strong>The 4-pack (4 large rocks, $19.99).</strong> This is the hard one. When a shopper searches "rocks for painting," your 4 rocks appear next to:</p>
+    <div class="tscroll"><table>
+      <thead><tr><th>Competitor (large-rock packs)</th><th class="num">Count</th><th class="num">Price</th><th class="num">Per rock</th><th class="num">Units/mo</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Pebblonia 4-pack</strong></td><td class="num">4</td><td class="num">$19.99</td><td class="num"><span class="pill bad">$5.00</span></td><td class="num">new</td></tr>
+        <tr><td>Simetufy 15 pcs, 4–5"</td><td class="num">15</td><td class="num">$22.99</td><td class="num">$1.53</td><td class="num">813</td></tr>
+        <tr><td>Simetufy 20 pcs, 3.3–4.5"</td><td class="num">20</td><td class="num">$23.99</td><td class="num">$1.20</td><td class="num">711</td></tr>
+        <tr><td>CYLHCM 24 pcs, 3–4"</td><td class="num">24</td><td class="num">$20.39</td><td class="num">$0.85</td><td class="num">826</td></tr>
+        <tr><td>Simetufy 12 pcs, 5–6"</td><td class="num">12</td><td class="num">$28.99</td><td class="num">$2.42</td><td class="num">377</td></tr>
+      </tbody>
+    </table></div>
+    <div class="call risk">
+      <span class="k">The 4-pack's core problem</span>
+      <p>At $5 per rock, the 4-pack is 3–6× more expensive per rock than the alternatives a shopper sees on the same screen. Ranking for a keyword doesn't help if the shopper picks the "15 rocks for $23" next to you. The 4-pack can only work as a <strong>premium keepsake / gift</strong> (large, smooth, white — for a specific project), never as a value buy. This caps how much we can profitably spend advertising it, and it's why the Kit gets the budget.</p>
+    </div>
+
+    <p><strong>The Kit ($34.99) is far better positioned.</strong> In the $30–40 band, most of what shoppers see is <em>bulk rocks</em> (Simetufy's 100-piece pack at $34.99 alone does ~$111K/month). But almost nobody sells a <strong>premium adult kit</strong> — the only real "kit" competitor with scale is JOYIN's cheap $14.99 kids' set. Your Kit (turntable, metallic paints, dotting tools, gift-ready) has a genuine gap to own: the complete, giftable, beginner-friendly experience. It won't beat "100 rocks for $35" on quantity, and it doesn't need to — it wins the gift and beginner shopper.</p>
+  </section>
+
+  <!-- 4 -->
+  <section id="s4">
+    <div class="sec-head">
+      <svg class="pebble" viewBox="0 0 60 60"><ellipse cx="30" cy="30" rx="26" ry="24" fill="var(--coral-soft)"/><ellipse cx="30" cy="30" rx="24" ry="22" fill="none" stroke="var(--coral)" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.1 6.4"/><text x="30" y="31" text-anchor="middle" dominant-baseline="middle" font-family="Fraunces,serif" font-size="20" font-weight="600" fill="var(--coral)">4</text></svg>
+      <h2>Per-Unit Profitability — The Real Numbers</h2>
+    </div>
+    <div class="sec-rule"></div>
+
+    <p>These use your landed costs from June 29 ($6.83 Heart, $7.24 Round, $17.52 Kit) and the exact Amazon fees from your Seller Central account. I've also built you a live Excel calculator (the companion file to this plan) where you can change any input — price, cost, discount — and watch every number update.</p>
+
+    <div class="call note">
+      <span class="k">Read this before the tables</span>
+      <p>Amazon's own calculator shows a "net margin" of 55–69% on these products. <strong>Ignore that number.</strong> It looks huge only because Amazon doesn't know what your product costs you — the cost field is blank on their side. Once we plug in your real landed cost, the true margin is 9–11%. The tables below are the real picture.</p>
+    </div>
+
+    <h3><span class="h3n">4.1</span>Heart 4-Pack — B0GG7TFM5V — $19.99</h3>
+    <div class="tscroll"><table>
+      <thead><tr><th>Line item</th><th class="num">Amount</th></tr></thead>
+      <tbody>
+        <tr><td>Selling price</td><td class="num">$19.99</td></tr>
+        <tr><td>Amazon referral fee (15%)</td><td class="num cost">($3.00)</td></tr>
+        <tr><td>FBA fulfillment fee</td><td class="num cost">($7.30)</td></tr>
+        <tr><td>Storage (per unit sold)</td><td class="num cost">($0.02)</td></tr>
+        <tr><td>Inbound placement fee</td><td class="num cost">($0.70)</td></tr>
+        <tr class="total"><td>Total Amazon charges</td><td class="num cost">($11.02)</td></tr>
+        <tr><td>Your product cost (landed)</td><td class="num cost">($6.83)</td></tr>
+        <tr class="grand"><td>Gross profit (before ads)</td><td class="num"><span class="prof">$2.14</span></td></tr>
+        <tr><td>Gross margin</td><td class="num">10.7%</td></tr>
+        <tr><td>Break-even ACOS</td><td class="num"><span class="pill bad">10.7%</span></td></tr>
+      </tbody>
+    </table></div>
+
+    <h3><span class="h3n">4.2</span>Round 4-Pack — B0GFKLJQZR — $19.99</h3>
+    <p>Identical Amazon fees; product cost is $0.41 higher ($7.24).</p>
+    <div class="tscroll"><table>
+      <thead><tr><th>Line item</th><th class="num">Amount</th></tr></thead>
+      <tbody>
+        <tr><td>Total Amazon charges</td><td class="num cost">($11.02)</td></tr>
+        <tr><td>Your product cost (landed)</td><td class="num cost">($7.24)</td></tr>
+        <tr class="grand"><td>Gross profit (before ads)</td><td class="num"><span class="prof">$1.73</span></td></tr>
+        <tr><td>Gross margin</td><td class="num">8.7%</td></tr>
+        <tr><td>Break-even ACOS</td><td class="num"><span class="pill bad">8.7%</span></td></tr>
+      </tbody>
+    </table></div>
+
+    <h3><span class="h3n">4.3</span>Mandala Kit — B0GDZN7KPB — $34.99</h3>
+    <div class="tscroll"><table>
+      <thead><tr><th>Line item</th><th class="num">Amount</th></tr></thead>
+      <tbody>
+        <tr><td>Selling price</td><td class="num">$34.99</td></tr>
+        <tr><td>Amazon referral fee (15%)</td><td class="num cost">($5.25)</td></tr>
+        <tr><td>FBA fulfillment fee</td><td class="num cost">($7.96)</td></tr>
+        <tr><td>Storage (per unit sold)</td><td class="num cost">($0.36)</td></tr>
+        <tr><td>Inbound placement fee</td><td class="num cost">($0.90)</td></tr>
+        <tr class="total"><td>Total Amazon charges</td><td class="num cost">($14.47)</td></tr>
+        <tr><td>Your product cost (landed)</td><td class="num cost">($17.52)</td></tr>
+        <tr class="grand"><td>Gross profit (before ads)</td><td class="num"><span class="prof">$3.00</span></td></tr>
+        <tr><td>Gross margin</td><td class="num">8.6%</td></tr>
+        <tr><td>Break-even ACOS</td><td class="num"><span class="pill bad">8.6%</span></td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="call note">
+      <span class="k">One temporary tailwind worth knowing</span>
+      <p>Because these are brand-new listings, Amazon is currently applying a <strong>new-seller FBA fee credit</strong> — about <strong>$2.00 per 4-pack and $3.50 per Kit</strong>. That roughly <em>doubles</em> your launch-window profit (Heart ≈ $4.14, Kit ≈ $6.50 right now). It's genuinely helpful — but it's temporary and expires. So we treat the numbers above (without the credit) as your real, steady-state margin for planning, and use the credit period as a window to build reviews and rank cheaply while it lasts.</p>
+    </div>
+
+    <h3><span class="h3n">4.4</span>What thin margins mean for ads</h3>
+    <p>A break-even ACOS of 8–11% means any ad that costs more than 8–11% of the sale loses money on that unit. For context, a launch normally runs 60–130% ACOS in the first months. So <strong>early ad sales are sold at a loss on purpose</strong> — we're buying search rank and reviews, betting that the organic (free) sales that follow will carry the profit later. That bet only pays off if we also fix the margin (Section 5). This is the crux of the whole plan.</p>
+  </section>
+
+  <!-- 5 -->
+  <section id="s5">
+    <div class="sec-head">
+      <svg class="pebble" viewBox="0 0 60 60"><ellipse cx="30" cy="30" rx="26" ry="24" fill="var(--plum-soft)"/><ellipse cx="30" cy="30" rx="24" ry="22" fill="none" stroke="var(--plum)" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.1 6.4"/><text x="30" y="31" text-anchor="middle" dominant-baseline="middle" font-family="Fraunces,serif" font-size="20" font-weight="600" fill="var(--plum)">5</text></svg>
+      <h2>Pricing, Discounts &amp; Positioning</h2>
+    </div>
+    <div class="sec-rule"></div>
+
+    <p>This is where the biggest decisions are. Pricing moves your break-even ACOS more than anything we can do inside the ad account.</p>
+
+    <h3><span class="h3n">5.1</span>4-Pack — raise to $24.99, with eyes open</h3>
+    <p>At $24.99, the margin becomes advertisable:</p>
+    <div class="tscroll"><table>
+      <thead><tr><th>4-Pack @ $24.99</th><th class="num">Amazon charges</th><th class="num">Gross profit</th><th class="num">Margin</th><th class="num">Break-even ACOS</th></tr></thead>
+      <tbody>
+        <tr><td>Heart ($6.83 cost)</td><td class="num cost">($11.77)</td><td class="num"><span class="prof">$6.39</span></td><td class="num">25.6%</td><td class="num"><span class="pill win">25.6%</span></td></tr>
+        <tr><td>Round ($7.24 cost)</td><td class="num cost">($11.77)</td><td class="num"><span class="prof">$5.98</span></td><td class="num">23.9%</td><td class="num"><span class="pill win">23.9%</span></td></tr>
+      </tbody>
+    </table></div>
+    <p>This lifts break-even ACOS from ~9–11% to ~24–26%, which finally makes advertising the 4-pack survivable. It also moves it out of the weak $15–20 band into $20–25.</p>
+    <div class="call risk">
+      <span class="k">The honest caveat</span>
+      <p>A price increase does <em>not</em> fix the 4-rock problem — it slightly widens the value gap versus 15–20 rock packs. Raising the price only works if the listing is repositioned hard as a <strong>premium keepsake/gift</strong> (large 4" smooth white rocks, size-comparison photos, gift framing) rather than a craft-supply value buy. Even then, expect the 4-pack to convert modestly. <strong>The genuine long-term fix is a higher-count SKU</strong> — e.g. a 10–12 rock pack priced to compete — but that's a sourcing decision for you, not a PPC lever. Flagging it because it matters more than anything in the ad account.</p>
+    </div>
+
+    <h3><span class="h3n">5.2</span>Kit — hold $34.99 now, test $39.99 later, and push on cost</h3>
+    <p>The Kit sits in a proven price band and has few true kit rivals, so I'd hold $34.99 through launch rather than discount it. But the $3.00 margin is the constraint, and there are two real levers:</p>
+    <ul>
+      <li><strong>Supplier cost (biggest lever).</strong> $17.52 landed is high for the contents. Even a $2 reduction takes gross profit from $3.00 to $5.00 (8.6% → 14.3% margin) and makes the whole launch materially easier. Worth a direct conversation with your supplier — this is the highest-leverage thing on the entire list.</li>
+      <li><strong>Price test at $39.99 after ~30–50 reviews.</strong> Once social proof supports it, a higher price roughly doubles per-unit profit. We'd test it, not assume it, and watch conversion.</li>
+    </ul>
+
+    <h3><span class="h3n">5.3</span>Coupons — useful on the 4-pack, dangerous on the Kit</h3>
+    <p>A coupon shows a green "Save X%" badge that lifts click-through, and you only pay when it's used (plus a small ~$0.60 redemption fee). But at these margins a coupon can quietly erase your profit. The real math:</p>
+    <div class="tscroll"><table>
+      <thead><tr><th>Scenario</th><th class="num">Net price</th><th class="num">Gross profit</th><th>Verdict</th></tr></thead>
+      <tbody>
+        <tr><td>4-Pack @ $24.99, 10% coupon (Heart)</td><td class="num">$22.49</td><td class="num"><span class="prof">$4.27</span></td><td><span class="pill win">fine</span> ~19% margin</td></tr>
+        <tr><td>Kit @ $34.99, 5% coupon</td><td class="num">$33.24</td><td class="num">$1.51</td><td><span class="pill warn">tight</span></td></tr>
+        <tr><td>Kit @ $34.99, 10% coupon</td><td class="num">$31.49</td><td class="num cost">$0.03</td><td><span class="pill bad">wipes out profit</span></td></tr>
+      </tbody>
+    </table></div>
+    <div class="call rec">
+      <span class="k">Recommendation</span>
+      <p>Run a <strong>10% coupon on the 4-pack</strong> (helps click-through, margin survives). On the <strong>Kit, skip the coupon</strong> — a 10% coupon leaves essentially $0, and even 5% is thin. Use <strong>Vine reviews</strong> (next section) to build the Kit's social proof instead of discounting it.</p>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section id="s6">
+    <div class="sec-head">
+      <svg class="pebble" viewBox="0 0 60 60"><ellipse cx="30" cy="30" rx="26" ry="24" fill="var(--teal-soft)"/><ellipse cx="30" cy="30" rx="24" ry="22" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.1 6.4"/><text x="30" y="31" text-anchor="middle" dominant-baseline="middle" font-family="Fraunces,serif" font-size="20" font-weight="600" fill="var(--teal)">6</text></svg>
+      <h2>Break-Even ACOS &amp; Target TACOS</h2>
+    </div>
+    <div class="sec-rule"></div>
+
+    <p>Once pricing is set, these are the guardrails we manage the account against.</p>
+    <div class="tscroll"><table>
+      <thead><tr><th>Product</th><th class="num">Price</th><th class="num">Break-even ACOS</th><th class="num">Launch ACOS (M1–3)</th><th class="num">Target ACOS (M6+)</th><th class="num">TACOS to profit</th></tr></thead>
+      <tbody>
+        <tr><td>Heart 4-Pack</td><td class="num">$24.99</td><td class="num"><span class="pill win">25.6%</span></td><td class="num">60–110%</td><td class="num">30–45%</td><td class="num">under 26%</td></tr>
+        <tr><td>Round 4-Pack</td><td class="num">$24.99</td><td class="num"><span class="pill win">23.9%</span></td><td class="num">60–110%</td><td class="num">30–45%</td><td class="num">under 24%</td></tr>
+        <tr><td>Mandala Kit</td><td class="num">$34.99</td><td class="num"><span class="pill bad">8.6%</span></td><td class="num">55–100%</td><td class="num">30–45%</td><td class="num"><strong>under 9%</strong></td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="call risk">
+      <span class="k">The uncomfortable but important truth</span>
+      <p>Notice that even a <em>good</em> mature ACOS of ~30–45% is still <strong>above</strong> your break-even ACOS (9–26%). That means the ads themselves will not directly turn a profit at these margins — not in month 3, and honestly not even at scale unless price rises or cost drops. Profit in this business comes almost entirely from <strong>organic sales</strong> once we've earned rank. In plain terms: the account becomes profitable only when your <strong>TACOS drops below your gross margin %</strong> — driven by free organic orders, not by ads getting cheaper. Fixing the Kit's cost (Section 5.2) is what makes that reachable.</p>
+    </div>
+  </section>
+
+  <!-- 7 -->
+  <section id="s7">
+    <div class="sec-head">
+      <svg class="pebble" viewBox="0 0 60 60"><ellipse cx="30" cy="30" rx="26" ry="24" fill="var(--plum-soft)"/><ellipse cx="30" cy="30" rx="24" ry="22" fill="none" stroke="var(--plum)" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.1 6.4"/><text x="30" y="31" text-anchor="middle" dominant-baseline="middle" font-family="Fraunces,serif" font-size="20" font-weight="600" fill="var(--plum)">7</text></svg>
+      <h2>Amazon Vine — Your Reviews Engine</h2>
+    </div>
+    <div class="sec-rule"></div>
+
+    <p><strong>What it is:</strong> Amazon Vine is Amazon's official program that sends your product free to trusted reviewers ("Vine Voices") in exchange for honest reviews carrying a badge shoppers trust. It's the fastest legitimate way to go from zero reviews to a real review count.</p>
+    <p><strong>Why it matters here:</strong> your competitors have 300–11,000 reviews; your 4-packs have none and the Kit only a handful. Even perfect ads convert poorly when a shopper sees "0 reviews" next to a $25–35 price. Reviews aren't optional for this launch — they're the thing that makes every ad click worth more.</p>
+
+    <h3><span class="h3n">7.1</span>Cost (a real cash outlay — plan for it)</h3>
+    <div class="tscroll"><table>
+      <thead><tr><th>Product</th><th class="num">Enrollment</th><th class="num">Up to 30 units at your cost</th><th class="num">Total</th></tr></thead>
+      <tbody>
+        <tr><td>4-Pack (parent B0GK3CSGJP — covers both variations)</td><td class="num">$200</td><td class="num">~30 × $7.24 ≈ $217</td><td class="num"><strong>~$417</strong></td></tr>
+        <tr><td>Mandala Kit (B0GDZN7KPB)</td><td class="num">$200</td><td class="num">30 × $17.52 = $526</td><td class="num"><strong>~$726</strong></td></tr>
+        <tr class="grand"><td>Both</td><td class="num"></td><td class="num"></td><td class="num"><strong>~$1,143</strong></td></tr>
+      </tbody>
+    </table></div>
+    <p>You don't have to give away all 30 units — you can enroll fewer to manage cash (e.g. 15–20 on the Kit brings its cost down). But more units generally means more reviews, so I'd give the full 30 on the cheap 4-pack and as many on the Kit as your cash allows.</p>
+
+    <h3><span class="h3n">7.2</span>What to realistically expect</h3>
+    <ul>
+      <li><strong>Roughly 15–25 reviews per product</strong> from 30 units — not every Vine Voice posts.</li>
+      <li><strong>Ratings often run a little critical</strong> (Vine reviewers are tough; expect ~3.8–4.4 early, usually rising as organic buyers add reviews).</li>
+      <li><strong>Reviews arrive over 2–8 weeks</strong> — which is exactly why we enroll on day one and don't scale ads until the first 8–10 are live.</li>
+    </ul>
+    <div class="call plum">
+      <span class="k">Recommendation</span>
+      <p>Enroll <strong>both products in Vine on day one</strong>. Hold ad scaling until the first reviews land. The ~$1,143 spent here will save considerably more in wasted ad spend, because every click converts better once there's social proof to land on.</p>
+    </div>
+  </section>
+
+  <!-- 8 -->
+  <section id="s8">
+    <div class="sec-head">
+      <svg class="pebble" viewBox="0 0 60 60"><ellipse cx="30" cy="30" rx="26" ry="24" fill="var(--blue-soft)"/><ellipse cx="30" cy="30" rx="24" ry="22" fill="none" stroke="var(--blue)" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.1 6.4"/><text x="30" y="31" text-anchor="middle" dominant-baseline="middle" font-family="Fraunces,serif" font-size="20" font-weight="600" fill="var(--blue)">8</text></svg>
+      <h2>The 90-Day PPC Launch Plan</h2>
+    </div>
+    <div class="sec-rule"></div>
+
+    <div class="call risk">
+      <span class="k">First — an inventory check that blocks everything</span>
+      <p>Your 4-packs currently show <strong>56 units on hand but 0 "available"</strong> in Seller Central, while the Kit shows 26 available and has already sold 28 units. We cannot advertise a product that can't ship. Before any 4-pack spend, please confirm with the catalog team that the 4-pack inventory is actually sellable. Until it is, <strong>100% of the budget goes to the Kit</strong> — which is where we'd weight it anyway.</p>
+    </div>
+
+    <h3><span class="h3n">8.1</span>The keywords that matter (from your real search data)</h3>
+    <p><strong>For the Kit — the hero product:</strong></p>
+    <div class="tscroll"><table>
+      <thead><tr><th>Keyword</th><th class="num">Searches/mo</th><th class="num">Sugg. CPC</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>rock painting kit</td><td class="num">15,564</td><td class="num">$0.89</td><td>The primary money term for the Kit</td></tr>
+        <tr><td>painting kits for adults</td><td class="num">2,450</td><td class="num">$0.95</td><td>Your exact audience</td></tr>
+        <tr><td>rock painting kit for kids</td><td class="num">1,863</td><td class="num">$0.86</td><td>Gift buyers</td></tr>
+        <tr><td>rock painting supplies</td><td class="num">3,372</td><td class="num">$0.85</td><td>Low competition (few titles use it)</td></tr>
+        <tr><td>mandala rock painting kit</td><td class="num">615</td><td class="num">$0.77</td><td><span class="pill win">exact product match</span></td></tr>
+        <tr><td>dot painting kits for adults</td><td class="num">892</td><td class="num">$0.65</td><td>Low competition, on-target</td></tr>
+      </tbody>
+    </table></div>
+    <p><strong>Broader gift/craft terms to expand into (month 2+) — high volume, low competition, affordable:</strong></p>
+    <div class="tscroll"><table>
+      <thead><tr><th>Keyword</th><th class="num">Searches/mo</th><th class="num">Sugg. CPC</th></tr></thead>
+      <tbody>
+        <tr><td>crafts for adults</td><td class="num">29,199</td><td class="num">$0.50</td></tr>
+        <tr><td>craft kits for adults</td><td class="num">11,220</td><td class="num">$0.61</td></tr>
+        <tr><td>adult craft kits</td><td class="num">5,605</td><td class="num">$0.70</td></tr>
+      </tbody>
+    </table></div>
+    <p><strong>For the 4-pack — narrow, size/spec long-tails where "4 rocks" isn't directly out-counted:</strong></p>
+    <div class="tscroll"><table>
+      <thead><tr><th>Keyword</th><th class="num">Searches/mo</th><th class="num">Sugg. CPC</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>large rocks for painting</td><td class="num">991</td><td class="num">$0.96</td><td>Your rocks are 4"</td></tr>
+        <tr><td>white rocks for painting</td><td class="num">988</td><td class="num">$0.87</td><td>Matches product</td></tr>
+        <tr><td>rocks for painting 4-5 inches</td><td class="num">541</td><td class="num">$0.80</td><td><span class="pill win">almost no competition</span></td></tr>
+        <tr><td>large flat rocks for painting</td><td class="num">384</td><td class="num">$1.11</td><td>No competing titles</td></tr>
+      </tbody>
+    </table></div>
+    <p>Note: the "pet memorial keepsake" angle in your title is a lovely story, but there's essentially <strong>no search demand</strong> for it (people don't search "pet memorial rocks"), so we won't build ad campaigns around it — it's a listing/creative message, not a keyword.</p>
+
+    <h3><span class="h3n">8.2</span>Budget split — Kit-weighted on purpose</h3>
+    <p>For $1,250/month (~$41/day). The Kit gets ~80% because it's the product that can actually win.</p>
+    <div class="tscroll"><table>
+      <thead><tr><th>Campaign</th><th>Product</th><th class="num">Daily</th><th class="num">Monthly</th></tr></thead>
+      <tbody>
+        <tr><td>SP Auto (discovery)</td><td>Kit</td><td class="num">$6</td><td class="num">~$180</td></tr>
+        <tr><td>SP Broad (discovery)</td><td>Kit</td><td class="num">$6</td><td class="num">~$180</td></tr>
+        <tr><td>SP Exact (hero terms)</td><td>Kit</td><td class="num">$12</td><td class="num">~$360</td></tr>
+        <tr><td>SP Product Targeting (vs JOYIN + bulk rocks)</td><td>Kit</td><td class="num">$6</td><td class="num">~$180</td></tr>
+        <tr><td>SB Video (month 2+, after reviews)</td><td>Kit</td><td class="num">$3</td><td class="num">~$90</td></tr>
+        <tr><td>SP Auto (low bid)</td><td>4-Pack</td><td class="num">$4</td><td class="num">~$120</td></tr>
+        <tr><td>SP Exact (size/white long-tails)</td><td>4-Pack</td><td class="num">$3</td><td class="num">~$90</td></tr>
+        <tr><td>Buffer for optimization</td><td>—</td><td class="num">—</td><td class="num">~$50</td></tr>
+        <tr class="grand"><td>Total</td><td>Kit ≈ 79% / 4-Pack ≈ 17%</td><td class="num">~$41</td><td class="num"><strong>~$1,250</strong></td></tr>
+      </tbody>
+    </table></div>
+
+    <h3><span class="h3n">8.3</span>Negative keywords — added day one</h3>
+    <p>"Rock" and "stone" pull in a lot of irrelevant, expensive traffic. From your data, we block these immediately so we never pay for the wrong clicks:</p>
+    <ul>
+      <li><strong>Wrong meaning of "rock/stone":</strong> pop rocks, 30 rock, jesse stone, school of rock, classic rock, kid rock, yacht rock, baby rocker, puffin rock, pet rock (the toy), worry stones, gemstones.</li>
+      <li><strong>Landscaping / aquarium / gravel:</strong> aquarium rocks, fish tank gravel, pea gravel, river rocks for landscaping, rocks for landscaping, decorative rocks, fake rock.</li>
+      <li><strong>Wrong product / cheap intent:</strong> paint markers, paint pens (unless we target them for the Kit specifically), canvas, dollar store, under 5 dollars.</li>
+      <li><strong>Age mismatch (Kit is 6+):</strong> toddler, 3 year old, 4 year old.</li>
+    </ul>
+
+    <h3><span class="h3n">8.4</span>A realistic 90-day trajectory — not the rosy version</h3>
+    <p>This is where earlier drafts oversold it. For a zero-review launch with thin margins, here's what the numbers honestly look like:</p>
+    <div class="tscroll"><table>
+      <thead><tr><th>Phase</th><th class="num">Weeks</th><th>What's happening</th><th class="num">ACOS</th><th class="num">TACOS</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1 · Foundation</strong></td><td class="num">1–4</td><td>Vine enrolled day 1. Auto + Broad discovery only. Few/no reviews, low conversion, buying first rank.</td><td class="num">80–130%</td><td class="num">100–200%+</td></tr>
+        <tr><td><strong>2 · Traction</strong></td><td class="num">5–8</td><td>First Vine reviews live. Move proven terms to Exact. Add SB Video. Conversion improving.</td><td class="num">60–95%</td><td class="num">70–130%</td></tr>
+        <tr><td><strong>3 · Optimize</strong></td><td class="num">9–12</td><td>15–35 reviews, early organic rank. Cut losers, scale winners. Consider $39.99 Kit test.</td><td class="num">45–75%</td><td class="num">45–85%</td></tr>
+      </tbody>
+    </table></div>
+    <p>Yes — TACOS above 100% in month 1 is normal and expected; it simply means ad spend is briefly larger than total sales while there's almost no organic yet. It falls as reviews and rank build.</p>
+
+    <h3><span class="h3n">8.5</span>Where we realistically land by end of month 3</h3>
+    <div class="tscroll"><table>
+      <thead><tr><th>Metric</th><th class="num">Cautious</th><th class="num">Base case</th><th class="num">Upside</th></tr></thead>
+      <tbody>
+        <tr><td>Kit units / month</td><td class="num">25</td><td class="num">55</td><td class="num">100</td></tr>
+        <tr><td>4-Pack units / month (combined)</td><td class="num">15</td><td class="num">35</td><td class="num">70</td></tr>
+        <tr class="grand"><td>Total revenue / month</td><td class="num">~$1,700</td><td class="num">~$3,600</td><td class="num">~$6,500</td></tr>
+        <tr><td>Ad spend / month</td><td class="num">$1,200</td><td class="num">$1,350</td><td class="num">$1,500</td></tr>
+        <tr><td>Blended ACOS</td><td class="num">~75%</td><td class="num">~55%</td><td class="num">~42%</td></tr>
+        <tr><td>Blended TACOS</td><td class="num">~70%</td><td class="num">~45%</td><td class="num">~32%</td></tr>
+        <tr><td>Reviews live</td><td class="num">~15</td><td class="num">~30</td><td class="num">~45</td></tr>
+        <tr class="total"><td>Profit at month 3</td><td class="num">Loss</td><td class="num">Loss / breakeven</td><td class="num">Small loss</td></tr>
+      </tbody>
+    </table></div>
+    <p><strong>All three scenarios lose money or break even at month 3 — that's the honest picture,</strong> and it's normal for a launch of this type. The path to profit is months 6–12: <em>if</em> we fix the margin (4-pack price + Kit cost), build reviews to 60–120, and hold organic rank, we can reach ~150–300 combined units/month with TACOS in the 25–40% range and move toward blended breakeven-to-modest-profit. Without the margin fix, revenue can still grow but the account stays unprofitable — you'd be buying sales at a loss indefinitely.</p>
+
+    <h3><span class="h3n">8.6</span>Organic growth &amp; price testing (what you asked about)</h3>
+    <ul>
+      <li><strong>Organic rank</strong> is the real prize — it's the free sales that eventually make this profitable. It's earned by the combination of ad-driven sales velocity, reviews (Vine), and a strong listing (Ksenia's creative team). PPC and organic aren't separate projects; the ads are how we buy the early velocity that lifts organic rank.</li>
+      <li><strong>Price testing</strong> is built into the plan: hold launch prices through the review-building phase, then test the 4-pack's premium positioning and a $39.99 Kit price once reviews support it. We change one variable at a time and read conversion before/after.</li>
+      <li><strong>Listing quality</strong> must be locked before we scale spend — A+ content, a strong main image, and the brand story. Advertising a weak listing just pays to send shoppers to a page that doesn't convert.</li>
+    </ul>
+  </section>
+
+  <!-- 9 -->
+  <section id="s9">
+    <div class="sec-head">
+      <svg class="pebble" viewBox="0 0 60 60"><ellipse cx="30" cy="30" rx="26" ry="24" fill="var(--coral-soft)"/><ellipse cx="30" cy="30" rx="24" ry="22" fill="none" stroke="var(--coral)" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.1 6.4"/><text x="30" y="31" text-anchor="middle" dominant-baseline="middle" font-family="Fraunces,serif" font-size="20" font-weight="600" fill="var(--coral)">9</text></svg>
+      <h2>Is This Launchable? &amp; What to Decide on the Call</h2>
+    </div>
+    <div class="sec-rule"></div>
+
+    <p style="font-family:'Fraunces',serif;font-size:22px;font-style:italic;color:var(--teal);margin-bottom:20px;">Yes — it's launchable and can generate real revenue. Whether it generates real <em>profit</em> depends on the margin decisions, not the ads.</p>
+
+    <h3>What's genuinely working in your favor</h3>
+    <ul>
+      <li>A real, healthy market ($1.69M/month across the top products) that no single brand owns.</li>
+      <li>The Kit occupies a genuine gap — few premium adult kits exist, and it has a clean, affordable keyword base.</li>
+      <li>Low competition on dozens of specific long-tail terms you can win early.</li>
+      <li>An authentic US, artist-founded story in a category full of generic listings.</li>
+      <li>A temporary Amazon new-seller fee credit that doubles margin during the exact window we most need it.</li>
+    </ul>
+
+    <h3>What makes it hard (no sugarcoating)</h3>
+    <ul>
+      <li><strong>Margins are thin</strong> — break-even ACOS of 8–11% means ads lose money on every launch sale, and even mature ACOS stays above break-even. This is the defining challenge.</li>
+      <li><strong>The 4-pack's 4-rock count</strong> is a structural disadvantage that pricing alone can't fully solve.</li>
+      <li><strong>Zero reviews at start</strong> — Vine helps but the first 60 days will be slow and expensive.</li>
+      <li><strong>Profit is a months-6-to-12 outcome</strong>, and only if the margin levers are pulled.</li>
+    </ul>
+
+    <h3>Decisions for the July 1 call</h3>
+    <ol class="checks">
+      <li><strong>4-Pack pricing:</strong> raise to $24.99 and reposition as a premium keepsake/gift? <em>(Recommended — it's the only way the 4-pack is advertisable.)</em></li>
+      <li><strong>Amazon Vine:</strong> enroll both products (~$1,143, or less with fewer Kit units)? <em>(Recommended — reviews are non-negotiable for this launch.)</em></li>
+      <li><strong>Coupons:</strong> 10% on the 4-pack, none on the Kit? <em>(Recommended — a Kit coupon erases its margin.)</em></li>
+      <li><strong>Kit supplier cost:</strong> will you open a conversation about reducing the $17.52 landed cost? <em>(Highest-leverage item on this list.)</em></li>
+      <li><strong>Inventory:</strong> confirm the 4-packs are actually sellable (they show 0 available) and that stock won't run out mid-launch.</li>
+      <li><strong>Budget commitment:</strong> hold ~$1,250/month for the full 90 days without pulling back after month 1 — launches that get defunded early always fail — and go in understanding month 1–3 runs at a loss by design.</li>
+    </ol>
+    <p style="margin-top:16px;">Everything else — campaign builds, bids, negatives, weekly optimization and reporting — is on our side. My job on the call is to make sure you're comfortable with the trade-offs above before a dollar is spent.</p>
+  </section>
+
+  <hr class="big">
+</div>
+
+<footer>
+  Prepared July 1, 2026 by Hassan Iftikhar, AMZ One Step. Market and keyword figures from a live Helium 10 pull dated July 1, 2026 (top 60 products on "rocks for painting"; 11,382-keyword competitor export). Fees from Pebblonia Seller Central estimates; landed costs per the June 29 client meeting. All projections are estimates — actual performance will vary and this plan will be revised monthly against real account data.
+</footer>
+
+</body>
+</html>
